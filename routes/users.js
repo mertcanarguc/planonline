@@ -8,6 +8,10 @@ router.get('/register', function(req, res) {
     res.render('front/register', { });
 });
 
+router.get('/magazareg', function(req, res) {
+  res.render('front/magazareg', { });
+});
+
 router.post('/register', function(req, res) {
     User.register(new User({ username: req.body.username}),
     req.body.password, function(err, user) {
